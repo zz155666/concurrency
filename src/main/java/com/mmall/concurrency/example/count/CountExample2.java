@@ -7,6 +7,7 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * @ProjectName: concurrency
@@ -21,14 +22,14 @@ import java.util.concurrent.Semaphore;
 
 @Slf4j
 @NotThreadSafe
-public class ConcurrencyTest {
+public class CountExample2 {
 
     //请求总数
-    public static  int clientTotal=1000;
+    public static  int clientTotal=5000;
     //同时并发执行的线程数
     public static  int threadTotal=50;
 
-    public static  int count=0;
+    public static AtomicInteger count= new AtomicInteger(0);
 
     public static void main(String[] args) throws  Exception{
         ExecutorService executorService= Executors.newCachedThreadPool();
@@ -52,6 +53,6 @@ public class ConcurrencyTest {
     }
 
     private static void add(){
-        count++;
+        count.incrementAndGet();
     }
 }
