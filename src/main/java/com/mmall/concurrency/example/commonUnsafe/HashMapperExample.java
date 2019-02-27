@@ -1,21 +1,20 @@
 package com.mmall.concurrency.example.commonUnsafe;
 
-import com.mmall.concurrency.annoations.NotRecommend;
 import lombok.extern.slf4j.Slf4j;
-import org.joda.time.DateTime;
-import org.joda.time.format.DateTimeFormat;
-import org.joda.time.format.DateTimeFormatter;
 
-import java.text.SimpleDateFormat;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
 
 @Slf4j
-public class DataExample3 {
+public class HashMapperExample {
 
-    private static DateTimeFormatter dateTimeFormatter= DateTimeFormat.forPattern("yyyyMMdd");
+    private static Map<Integer,Integer> map=new HashMap<>();
 
     public static  int clientTotal=1000;
     //同时并发执行的线程数
@@ -41,10 +40,11 @@ public class DataExample3 {
         }
         countDownLatch.await();
         executorService.shutdown();
+        log.info("count:{}",map.size());
     }
 
     private static void update(int i){
-           log.info("{},{}",i, DateTime.parse("20180228",dateTimeFormatter).toDate());;
+        map.put(i,i);
     }
 
 }
