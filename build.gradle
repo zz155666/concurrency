@@ -25,5 +25,7 @@ dependencies {
 	// https://mvnrepository.com/artifact/com.google.guava/guava
 	compile group: 'com.google.guava', name: 'guava', version: '27.0.1-jre'
 
+// https://mvnrepository.com/artifact/joda-time/joda-time
+	compile group: 'joda-time', name: 'joda-time', version: '2.10.1'
 
 }
