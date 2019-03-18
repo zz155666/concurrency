@@ -20,5 +20,6 @@ dependencies {
     compile group: 'com.lmax', name: 'disruptor', version: '3.4.2'
 // https://mvnrepository.com/artifact/com.fasterxml.uuid/java-uuid-generator
     compile group: 'com.fasterxml.uuid', name: 'java-uuid-generator', version: '3.1.5'
-
+// https://mvnrepository.com/artifact/org.projectlombok/lombok
+    compile group: 'org.projectlombok', name: 'lombok', version: '1.18.6'
 }
