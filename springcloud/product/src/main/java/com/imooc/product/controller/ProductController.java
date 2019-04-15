@@ -1,5 +1,7 @@
 package com.imooc.product.controller;
 
+import org.springframework.web.bind.annotation.RestController;
+
 /**
  * @ProjectName: product
  * @Package: com.imooc.product.controller
@@ -10,5 +12,6 @@ package com.imooc.product.controller;
  * @UpdateRemark: 更新说明
  * @Version: 1.0
  */
+@RestController
 public class ProductController {
 }
