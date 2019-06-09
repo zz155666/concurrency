@@ -1,0 +1,15 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+spring:
+  application:
+    name: order
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    username: metest
+    password: 1594814zz
+    url: jdbc:mysql://cdb-r0w87dbi.bj.tencentcdb.com:10038/springboottest?characterEncoding=utf-8&useSSL=false
+  jpa:
+    show-sql: true
+
